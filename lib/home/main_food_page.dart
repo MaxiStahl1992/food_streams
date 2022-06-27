@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_streams/home/food_page_body.dart';
-import 'package:food_streams/style/colors.dart';
+import 'package:food_streams/utils/colors.dart';
+import 'package:food_streams/utils/dimensions.dart';
 import 'package:food_streams/widgets/big_text.dart';
 import 'package:food_streams/widgets/small_text.dart';
 
@@ -19,12 +20,13 @@ class _MainFoodPageState extends State<MainFoodPage> {
         children: [
           Container(
             child: Container(
-              margin: const EdgeInsets.only(top: 45, bottom: 15),
-              padding: const EdgeInsets.only(left: 20, right: 20),
+              margin: EdgeInsets.only(top: Dimensions.height45, bottom: Dimensions.height15),
+              padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       BigText(text: "Germany", color: AppColors.mainColor),
                       Row(
@@ -37,13 +39,13 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   ),
                   Center(
                     child: Container(
-                      width: 45,
-                      height: 45,
+                      width: Dimensions.width45,
+                      height: Dimensions.height45,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(Dimensions.radius15),
                         color: AppColors.mainColor,
                       ),
-                      child: const Icon(Icons.search, color: Colors.white),
+                      child: Icon(Icons.search, color: Colors.white, size: Dimensions.icon24,),
                     ),
                   )
                 ],

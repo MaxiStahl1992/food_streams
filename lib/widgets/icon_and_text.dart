@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:food_streams/utils/dimensions.dart';
 import 'package:food_streams/widgets/small_text.dart';
 
 class IconAndText extends StatelessWidget {
@@ -17,7 +18,7 @@ class IconAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon, color: iconColor),
+        Icon(icon, color: iconColor, size: Dimensions.icon24,),
         const SizedBox(width: 5),
         SmallText(text: text)
       ],
